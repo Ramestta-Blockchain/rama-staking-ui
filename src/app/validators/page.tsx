@@ -1,8 +1,11 @@
-import { Box } from "@mui/material"
+"use client"
+import Validatorcomp from "@/ui/validator/validatorcomp"
 
 const ValidatorPage = () => {
     return (
-      <Box>ValidatorPage</Box>
+      <>
+       <Validatorcomp/>
+      </>
     )
   }
   

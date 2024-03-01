@@ -1,9 +1,14 @@
+import Accountcmp from "@/ui/account/accountcmp";
+import Footer from "@/ui/shared/footer";
 import { Box } from "@mui/material"
 
-const AccountPage = () => {
+const MyAccount = () => {
   return (
-    <Box>AccountPage</Box>
+    <>
+      <Accountcmp />
+      <Footer />
+    </>
   )
 }
 
-export default AccountPage
+export default MyAccount;
