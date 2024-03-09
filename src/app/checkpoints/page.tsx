@@ -1,9 +1,10 @@
+import Checkpointcmp from "@/ui/checkpointcmp/checkpointcmp"
 import { Box } from "@mui/material"
 
-const CheckpointPage = () => {
+const Checkpoint = () => {
     return (
-      <Box>CheckpointPage</Box>
+      <Checkpointcmp/>
     )
   }
   
-export default CheckpointPage
+export default Checkpoint

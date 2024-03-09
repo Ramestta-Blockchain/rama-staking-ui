@@ -1,7 +1,7 @@
 "use client"
 import { Box, Grid, IconButton, Tooltip, Typography, useTheme } from "@mui/material";
 import { useContext } from "react";
- 
+
 import { cardHome } from "@/data/cardHome";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,21 +24,23 @@ export default function card() {
                                 backgroundColor: theme.palette.secondary.main,
                                 padding: '1rem',
                                 height: '100%',
-                                borderRadius:'12px',
+                                borderRadius: '12px',
                             }}>
-                                <Link href={'#'}
+                                <Link href={`${item.url ? item.url : 'javascript:void(0)'}`}
                                     style={{
                                         display: 'flex',
                                         gap: '10px',
                                         alignItems: 'center',
                                         textDecoration: 'none',
                                         color: '#922BC4',
-                                        fontSize: '15px'
-                                    }} color={'#922BC4'}>{item.CardTitle}
+                                        fontSize: '15px',
+                                        cursor: item.url ? "pointer" : "auto"
+                                    }}
+                                    color={'#922BC4'}>{item.CardTitle}
                                     <Typography component={'span'}><Box component={'span'}><Image src={item.arrow && item.arrow} alt="" /></Box>
                                         <Tooltip placement="right-start" title="Annualized staking reward rate">
-                                            <IconButton sx={{padding:'0'}}>
-                                                <Image style={{marginLeft:'10px'}} src={theme.palette.mode === "dark" ? item.TooltipForLight : item.TooltipForDark} alt="" />
+                                            <IconButton sx={{ padding: '0' }}>
+                                                <Image style={{ marginLeft: '10px' }} src={theme.palette.mode === "dark" ? item.TooltipForLight : item.TooltipForDark} alt="" />
                                             </IconButton>
                                         </Tooltip> </Typography>
                                 </Link>

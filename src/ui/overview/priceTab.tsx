@@ -10,6 +10,7 @@ import prcelight from '../../icons/prcelight.svg'
 import prcedark from '../../icons/prcedark.svg'
 import { styled, useTheme } from '@mui/material';
 import { ColorModeContext } from '@/app/layout';
+import Price from '../allchart/price';
 
 
 interface TabPanelProps {
@@ -92,7 +93,8 @@ export default function PriceTab() {
                 <CustomTabPanel value={value} index={0}>
                     <>
                         <StyledBox >
-                            <Image src={theme.palette.mode === "dark" ? prcelight : prcedark} alt="graph" style={{ width: '100%', height: 'auto' }} />
+                            {/* <Image src={theme.palette.mode === "dark" ? prcelight : prcedark} alt="graph" style={{ width: '100%', height: 'auto' }} /> */}
+                            <Price/>
                         </StyledBox>
 
                     </>
@@ -100,14 +102,16 @@ export default function PriceTab() {
                 <CustomTabPanel value={value} index={1}>
                     <>
                         <StyledBox >
-                            <Image src={theme.palette.mode === "dark" ? prcelight : prcedark} alt="graph" style={{ width: '100%', height: 'auto' }} />
+                            {/* <Image src={theme.palette.mode === "dark" ? prcelight : prcedark} alt="graph" style={{ width: '100%', height: 'auto' }} /> */}
+                            <Price/>
                         </StyledBox>
                     </>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
                     <>
                         <StyledBox >
-                            <Image src={theme.palette.mode === "dark" ? prcelight : prcedark} alt="graph" style={{ width: '100%', height: 'auto' }} />
+                            {/* <Image src={theme.palette.mode === "dark" ? prcelight : prcedark} alt="graph" style={{ width: '100%', height: 'auto' }} /> */}
+                            <Price/>
                         </StyledBox>
                     </>
                 </CustomTabPanel>

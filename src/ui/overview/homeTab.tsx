@@ -16,6 +16,7 @@ import Delegator from '@/app/delegator/page';
 import MyAccount from '@/app/account/page';
 import Calculator from '@/app/calculator/page';
 import { ColorModeContext } from '@/app/layout';
+import History from '@/app/history/page';
 
 
 interface TabPanelProps {
@@ -111,7 +112,7 @@ export default function HomeTab() {
                     <Calculator />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={5}>
-                    Item six
+                     <History/>
                 </CustomTabPanel>
             </Box>
         </Box>

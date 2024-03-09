@@ -8,6 +8,9 @@ import { useContext, useState } from 'react';
 import { ColorModeContext } from '@/app/layout';
 import StakeTabDetail from './stakeTabDetail';
 import DelegatorTableDetail from './delegatorTableDetail';
+import CheckpointTable from './checkpointTable';
+import HeimdallTab from './heimdallTab';
+import BorTab from './borTab';
 
 
 interface TabPanelProps {
@@ -98,13 +101,13 @@ export default function DetailTab() {
                     <DelegatorTableDetail />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
-
+                    <CheckpointTable />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={3}>
-
+                    <HeimdallTab />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={4}>
-
+                    <BorTab />
                 </CustomTabPanel>
 
             </Box>

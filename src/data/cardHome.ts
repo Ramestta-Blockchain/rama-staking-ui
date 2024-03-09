@@ -31,6 +31,8 @@ export const cardHome = [
         TooltipForLight: tooltipl,
         TooltipForDark: tooltipd,
         arrow:cardarrow,
+        url:'/bor'
+        
     },
     {
         CardTitle: 'HEIMDALL BLOCK HEIGHT',
@@ -38,6 +40,7 @@ export const cardHome = [
         TooltipForLight: tooltipl,
         TooltipForDark: tooltipd,
         arrow:cardarrow,
+        url:'/heimdall'
     },
     {
         CardTitle: 'LAST CHECKPOINT',
@@ -46,6 +49,7 @@ export const cardHome = [
         TooltipForLight: tooltipl,
         TooltipForDark: tooltipd,
         arrow:cardarrow,
+        url:'/checkpoints'
     },
     {
         CardTitle: 'CHECKPOINT INTERVAL',

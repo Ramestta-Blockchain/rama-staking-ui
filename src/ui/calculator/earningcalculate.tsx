@@ -11,9 +11,9 @@ const StyledBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.secondary.main,
     padding: "1.5rem",
     borderRadius: '12px',
-    '@media(max-width : 600px)':{
+    '@media(max-width : 600px)': {
         padding: "1rem",
-        marginTop:'0.8rem' 
+        marginTop: '0.8rem'
     }
 }));
 
@@ -81,13 +81,13 @@ const Earningcalculate = () => {
                             <ListBox>
 
                                 <Box flex={'70%'}>
-                                     <Box
-                                     sx={{
-                                        backgroundColor:theme.palette.secondary.contrastText,
-                                        padding:'0.8rem',
-                                        borderRadius:'6px'
-                                     }}
-                                     >{ramaValue}</Box>
+                                    <Box
+                                        sx={{
+                                            backgroundColor: theme.palette.secondary.contrastText,
+                                            padding: '0.8rem',
+                                            borderRadius: '6px'
+                                        }}
+                                    >{ramaValue}</Box>
                                 </Box>
                                 <Box
                                     sx={{
@@ -154,7 +154,7 @@ const Earningcalculate = () => {
                         </StyledBox>
                     </Grid>
                     <Grid item lg={6} md={6} sm={12} xs={12}>
-                        <Reward/>
+                        <Reward />
                     </Grid>
                 </Grid>
             </Box>

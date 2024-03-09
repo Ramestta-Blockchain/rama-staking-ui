@@ -12,8 +12,10 @@ import ControllerTable from "../delegator/controllerTable"
 import StakeTable from "./stakeTable"
 import ShowTableDropdown from "@/theme/components/showTableDropdown"
 import PaginationCustome from "@/theme/components/paginationCustome"
+import TotalStake from "../allchart/totalStake"
 
 const ImageGraph = styled(Box)(({ theme }) => ({
+    marginTop:'2rem',
     'img':{
         width:'100%',
         height:'auto'
@@ -29,7 +31,8 @@ const StakeTabDetail=()=>{
         <Typography variant="h6" color={'#922BC4'}mt={2}>Total staked</Typography>
         <Typography variant="h5">381,616,837 RAMA</Typography>
         <ImageGraph>
-            <Image src={theme.palette.mode === 'dark' ? stakegraphl:stakegraphd} alt={""}/>
+            {/* <Image src={theme.palette.mode === 'dark' ? stakegraphl:stakegraphd} alt={""}/> */}
+            <TotalStake/>
         </ImageGraph>
         <Box mt={2}>
         <Headingcmp text={"Delegation history"}/>

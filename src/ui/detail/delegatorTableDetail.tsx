@@ -13,8 +13,10 @@ import StakeTable from "./stakeTable"
 import ShowTableDropdown from "@/theme/components/showTableDropdown"
 import PaginationCustome from "@/theme/components/paginationCustome"
 import DelegatorTable from "./delegatorTable"
+import Delegator from "../allchart/delegator"
 
 const ImageGraph = styled(Box)(({ theme }) => ({
+    marginTop:'2rem',
     'img':{
         width:'100%',
         height:'auto'
@@ -30,7 +32,7 @@ const DelegatorTableDetail=()=>{
         <Typography variant="h6" color={'#922BC4'}mt={2}>Total delegators</Typography>
         <Typography variant="h5">130</Typography>
         <ImageGraph>
-            <Image src={theme.palette.mode === 'dark' ? stakegraphl:stakegraphd} alt={""}/>
+            <Delegator/>
         </ImageGraph>
         <Box mt={2}>
         <Headingcmp text={"Delegators"}/>
