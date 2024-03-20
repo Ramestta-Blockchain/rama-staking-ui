@@ -4,21 +4,30 @@ import Header from "../shared/Header";
 import Footer from "../shared/footer";
 import DetailTab from "./detailTab";
 import UserProfile from "./userProfile";
-import { Box, useTheme } from "@mui/material";
+import { Box, styled, useTheme } from "@mui/material";
 import { ColorModeContext } from "@/app/layout";
 
+
+const StyledBox = styled(Box)(({ theme }) => ({
+    backgroundColor: theme.palette.background.paper,
+    padding: '0rem 1.5rem',
+    minHeight:'100vh',
+    '@media(max-width : 600px)':{
+        padding: '0rem 0.5rem', 
+    }
+}));
 
 const Detailcmp = () => {
     const colorMode = useContext(ColorModeContext);
     const theme = useTheme();
     return (
         <>
-            <Box sx={{ backgroundColor: theme.palette.background.paper, }}>
+            <StyledBox>
                 <Header />
                 <UserProfile />
                 <DetailTab />
                 <Footer />
-            </Box>
+            </StyledBox>
         </>
     )
 }

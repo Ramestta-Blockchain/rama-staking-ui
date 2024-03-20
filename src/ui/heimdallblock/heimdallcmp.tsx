@@ -12,7 +12,6 @@ import HeimdallTable from "./heimdallTable";
 import AllBlock from "./allBlock";
 
 const StyledBox = styled(Box)(({ theme }) => ({
-    padding: '0rem 1.5rem',
     'h1':{
         '@media(max-width : 900px)':{
             textAlign:'left'
@@ -25,8 +24,7 @@ const Heimdallcmp = () => {
     const colorMode = useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box sx={{ backgroundColor: theme.palette.background.paper, }}>
-            <Header />
+         
             <StyledBox>
                 <Overview text={'All RAMA validators'} href={'/'} />
                 <Headingcmp text={'Heimdall Blocks'} />
@@ -42,8 +40,7 @@ const Heimdallcmp = () => {
                 <ControllerTable/>
                 <HeimdallTable/>
             </StyledBox>
-            <Footer/>
-        </Box>
+             
 
     )
 }

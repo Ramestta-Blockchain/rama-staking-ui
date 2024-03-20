@@ -5,7 +5,6 @@ const History = () => {
     return (
         <>
         <Historycmp/>
-        <Footer/>
         </>
     )
 }

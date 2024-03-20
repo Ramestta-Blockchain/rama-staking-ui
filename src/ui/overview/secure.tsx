@@ -5,7 +5,7 @@ import GradientButtonText from "@/theme/components/gradientButtonText";
 import ButtonText from "@/theme/components/buttonText";
 import ramadollar from '../../icons/ramadollar.png'
 import { useContext } from "react";
- 
+
 import SubHeading from "@/theme/components/subHeading";
 import { ColorModeContext } from "@/app/layout";
 
@@ -16,21 +16,25 @@ const StyledBox = styled(Box)(({ theme }) => ({
     '@media(max-width : 900px)': {
         justifyContent: 'center',
         '@media(max-width : 600px)': {
-           flexWrap:'wrap'
+            flexWrap: 'wrap'
         }
     }
 }));
 
 const StyledImage = styled(Box)(({ theme }) => ({
     marginTop: '-7rem',
-    '@media(max-width : 900px)': {
-        marginTop: '0rem',
+    '@media(max-width : 1200px)': {
+        marginTop: '-4.5rem',
+        '@media(max-width : 900px)': {
+            marginTop: '0rem',
+        }
     }
 }));
 
 export default function Secure() {
     const colorMode = useContext(ColorModeContext);
     const theme = useTheme();
+
 
     return (
 

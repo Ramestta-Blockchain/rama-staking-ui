@@ -6,7 +6,7 @@ const MyAccount = () => {
   return (
     <>
       <Accountcmp />
-      <Footer />
+       
     </>
   )
 }

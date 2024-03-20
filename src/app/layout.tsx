@@ -10,9 +10,9 @@ import { Providers } from '@/configs/providers'
 import { CssBaseline, PaletteMode } from "@mui/material";
 import createTheme from "@mui/material/styles/createTheme";
 import { ThemeProvider } from "@mui/material/styles";
-import React from "react";
- 
- 
+import React, { useEffect } from "react";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -62,7 +62,7 @@ const lightPalette: LightPalette = {
   primary: {
     main: '#fff',
     contrastText: '#000',
-    light:'#d1d1d1'
+    light: '#d1d1d1'
   },
   secondary: {
     main: '#E3E1EB',
@@ -104,7 +104,7 @@ const darkPalette: DarkPalette = {
   primary: {
     main: '#2A2A30',
     contrastText: '#fff',
-    light:'#2A2A30'
+    light: '#2A2A30'
   },
   secondary: {
     main: '#1C1C20',
@@ -157,7 +157,19 @@ export default function RootLayout({
     // headers().get('cookie')
   ) as State
 
+  const getInitialMode = () => {
+    // Check if mode is saved in localStorage
+    const savedMode = localStorage.getItem('colorMode');
+    // If mode is saved, return saved mode, otherwise return 'light' as default
+    return savedMode ? (savedMode as PaletteMode) : 'light';
+  }
 
+  const [mode, setMode] = React.useState<PaletteMode>(getInitialMode);
+
+  useEffect(() => {
+    // Save mode preference to localStorage whenever it changes
+    localStorage.setItem('colorMode', mode);
+  }, [mode]);
 
   const getDesignTokens = (mode: PaletteMode) => ({
     palette: {
@@ -176,7 +188,11 @@ export default function RootLayout({
 
 
 
-  const [mode, setMode] = React.useState<PaletteMode>('light');
+
+  // const [mode, setMode] = React.useState<PaletteMode>('light');
+
+
+
   const colorMode = React.useMemo(
     () => ({
       // The dark mode switch would invoke this method
@@ -195,6 +211,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        
         <Providers initialState={initialState}>
           <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>

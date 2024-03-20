@@ -28,7 +28,7 @@ const AccountDefault = () => {
             <Box>
                 
 
-                <Box minHeight={'100vh'}>
+                <Box  >
                 <StyledBoxMain>
                     <Typography color={'#922BC4'}>POLYGON WALLET BALANCE</Typography>
                     <Headingcmp text={'0 RAMA'} />

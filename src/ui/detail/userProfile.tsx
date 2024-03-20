@@ -21,7 +21,7 @@ import { UptimeData } from "@/data/uptimeData";
 
 const StyledBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.background.paper,
-    padding: '0rem 1.5rem',
+     
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({

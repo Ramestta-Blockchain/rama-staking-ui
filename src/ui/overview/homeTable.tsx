@@ -69,8 +69,11 @@ function a11yProps(index: number) {
     };
 }
 
+interface MediaProps {
+    loading?: boolean;
+  }
  
-const HomeTable=()=> {
+const HomeTable=(props:MediaProps)=> {
     const [value, setValue] = useState(0);
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -78,6 +81,7 @@ const HomeTable=()=> {
     };
     const colorMode = useContext(ColorModeContext);
     const theme = useTheme();
+    const { loading = false } = props;
 
     return (
         <Box>

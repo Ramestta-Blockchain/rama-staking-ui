@@ -4,9 +4,9 @@ import { useContext } from "react";
 import { ColorModeContext } from "@/app/layout";
 import Overview from "@/theme/components/overview";
 import SubHeading from "@/theme/components/subHeading";
-
+ 
 const StyledBox = styled(Box)(({ theme }) => ({
-    padding: '1.5rem',
+     
     '@media(max-width : 600px)': {
         py: 2,
     }
@@ -18,6 +18,7 @@ const Faqscmp = () => {
     return (
         <>
             <StyledBox>
+                 
                 <Overview text={'Validators'} href={'/'} />
                 <Box sx={{ textAlign: 'center', marginTop: '1rem' }}>
                     <SubHeading text={'FAQs'} />

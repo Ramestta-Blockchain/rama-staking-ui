@@ -56,8 +56,8 @@ export default function DetailTab() {
     const theme = useTheme();
 
     return (
-        <Box sx={{ width: '100%', }}>
-            <Box sx={{ padding: '1.5rem 1.5rem', '@media(max-width : 600px)': { padding: '1rem 1.5rem', } }}>
+        <Box sx={{ width: '100%',marginTop:'1.5rem' }}>
+            <Box sx={{   '@media(max-width : 600px)': { padding: '1rem 1.5rem', } }}>
                 <Box sx={{ textTransform: 'capitalize' }}>
                     <Tabs
                         variant="scrollable"

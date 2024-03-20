@@ -19,9 +19,11 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import menud from '../../icons/menud.svg'
 import menul from '../../icons/menul.svg'
-import AppsIcon from '@mui/icons-material/Apps';
+import MenuIcon from '@mui/icons-material/Menu';
 import { ColorModeContext } from "@/app/layout";
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import menublack from '../../icons/menublack.svg'
+import menuwhite from '../../icons/menuwhite.svg'
 
 
 
@@ -51,7 +53,8 @@ const StyledBoxTwo = styled(Box)(({ theme }) => ({
 const StyledLink = styled(Link)(({ theme }) => ({
     'img': {
         '@media(max-width : 600px)': {
-            width: '150px'
+            width: '170px',
+            marginTop:'5px'
         }
     }
 }));
@@ -101,18 +104,21 @@ export default function Header() {
 
         <Box sx={{
             backgroundColor: theme.palette.background.paper,
-            p: { xs: 1.5, sm: 2, md: 3, lg: 3, xl: 3 },
+            padding:'15px 0px',
+            '@media(max-width : 600px)':{
+                padding:'5px 0px', 
+            }
 
         }}>
             <StyledBox>
                 <StyledBoxTwo>
-                    <Box sx={{ cursor: 'pointer' }} onClick={toggleDrawer(true)}><AppsIcon /></Box>
+                    <Box sx={{ cursor: 'pointer',marginTop:1 }} onClick={toggleDrawer(true)}><Image  src={theme.palette.mode === "dark" ? menublack : menuwhite} alt="" /></Box>
                     <Drawer open={openMob} onClose={toggleDrawer(false)}>
                         {DrawerList}
                     </Drawer>
                 </StyledBoxTwo>
                 <Box>
-                    <StyledLink href={"#"}><Image src={theme.palette.mode === "dark" ? logol : logo} alt="logo" /></StyledLink>
+                    <StyledLink href={"/"}><Image src={theme.palette.mode === "dark" ? logo : logo} alt="logo" /></StyledLink>
                 </Box>
                 <Box>
                     <Box
@@ -148,7 +154,10 @@ export default function Header() {
                                     }}
                                 >
                                     <Image src={darkd} alt="" />
-                                    <Image src={lightd} alt="" />
+
+                                    <Box sx={{ '@media(max-width : 600px)': { display: 'none' } }}>
+                                        <Image src={lightd} alt="" />
+                                    </Box>
                                 </Box>
                                 :
                                 <Box
@@ -162,7 +171,11 @@ export default function Header() {
                                             }
                                         }
                                     }}
-                                > <Image src={dark} alt="" />
+                                >
+
+                                    <Box sx={{ '@media(max-width : 600px)': { display: 'none' } }}>
+                                        <Image src={dark} alt="" />
+                                    </Box>
                                     <Image src={light} alt="" />
                                 </Box>
                             }
@@ -203,9 +216,9 @@ export default function Header() {
                                     'aria-labelledby': 'basic-button',
                                 }}
                             >
-                                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                                <MenuItem onClick={handleClose}>My account</MenuItem>
-                                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                                <MenuItem onClick={handleClose}><Link style={{textDecoration:'none',color:theme.palette.primary.contrastText}} href={"/calculator"}>Calculator</Link></MenuItem>
+                                <MenuItem onClick={handleClose}>RAMA Explorer</MenuItem>
+                                <MenuItem onClick={handleClose}><Link style={{textDecoration:'none',color:theme.palette.primary.contrastText}} href={"/faqs"}>FAQs</Link></MenuItem>
                             </Menu>
                         </Box>
                     </Box>

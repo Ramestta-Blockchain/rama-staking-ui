@@ -96,36 +96,36 @@ const TotalStake = () => {
     const theme = useTheme();
     return (
         <Box width="100%" height="400px">
-        <ResponsiveContainer>
-            <AreaChart
+            <ResponsiveContainer>
+                <AreaChart
 
-                data={data}
-                syncId="anyId"
-                margin={{
-                    top: 10,
-                    right: 10,
-                    left: 0,
-                    bottom: 0,
-                }}
-            >
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip 
-                contentStyle={{
-                    backgroundColor: theme.palette.primary.main,
-                    border: theme.palette.common.black,
-                    borderRadius: '6px'
-                }}
-                />
-                <Area type="monotone" dataKey="pv" stroke="#7542FF" strokeWidth={2} fill="#8659FF" />
+                    data={data}
+                    syncId="anyId"
+                    margin={{
+                        top: 10,
+                        right: 10,
+                        left: 0,
+                        bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip
+                        contentStyle={{
+                            backgroundColor: theme.palette.primary.main,
+                            border: theme.palette.common.black,
+                            borderRadius: '6px'
+                        }}
+                    />
+                    <Area type="monotone" dataKey="pv" stroke="#7542FF" strokeWidth={2} fill="#8659FF" />
 
-                <ReferenceLine y={10000} stroke="#ffffff05" strokeWidth={2} stopOpacity={0.8} />
-                <ReferenceLine y={7500} stroke="#ffffff05" strokeWidth={2} stopOpacity={0.8} />
-                <ReferenceLine y={5000} stroke="#ffffff05" strokeWidth={2} stopOpacity={0.8} />
-                <ReferenceLine y={2500} stroke="#ffffff05" strokeWidth={2} stopOpacity={0.8} />
-            </AreaChart>
-        </ResponsiveContainer>
-    </Box>
+                    <ReferenceLine y={10000} stroke="#ffffff05" strokeWidth={2} stopOpacity={0.8} />
+                    <ReferenceLine y={7500} stroke="#ffffff05" strokeWidth={2} stopOpacity={0.8} />
+                    <ReferenceLine y={5000} stroke="#ffffff05" strokeWidth={2} stopOpacity={0.8} />
+                    <ReferenceLine y={2500} stroke="#ffffff05" strokeWidth={2} stopOpacity={0.8} />
+                </AreaChart>
+            </ResponsiveContainer>
+        </Box>
     );
 };
 

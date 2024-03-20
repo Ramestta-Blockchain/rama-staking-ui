@@ -11,7 +11,7 @@ import CheckpointsTable from "./checkpointsTable";
 import Footer from "../shared/footer";
 
 const StyledBox = styled(Box)(({ theme }) => ({
-    padding: '0rem 1.5rem',
+    
     'h1':{
         '@media(max-width : 900px)':{
             textAlign:'left'
@@ -23,8 +23,7 @@ const Checkpointcmp = () => {
     const colorMode = useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box sx={{ backgroundColor: theme.palette.background.paper, }}>
-            <Header />
+         
             <StyledBox>
                 <Overview text={'All RAMA validators'} href={'/'} />
                 <Headingcmp text={'Checkpoints'} />
@@ -39,8 +38,7 @@ const Checkpointcmp = () => {
                 <ControllerTable/>
                 <CheckpointsTable/>
             </StyledBox>
-            <Footer/>
-        </Box>
+             
 
     )
 }

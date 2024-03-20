@@ -10,7 +10,7 @@ import Checkpoint from "../checkpointcmp/checkpoint";
 import BorTab from "./borTab";
 
 const StyledBox = styled(Box)(({ theme }) => ({
-    padding: '0rem 1.5rem',
+     
     'h1':{
         '@media(max-width : 900px)':{
             textAlign:'left'
@@ -23,8 +23,8 @@ const Borcmp = () => {
     const colorMode = useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box sx={{ backgroundColor: theme.palette.background.paper, }}>
-            <Header />
+         
+            
             <StyledBox>
                 <Overview text={'All RAMA validators'} href={'/'} />
                 <Headingcmp text={'Bor Blocks'} />
@@ -47,8 +47,8 @@ const Borcmp = () => {
                <BorTab/>
                  
             </StyledBox>
-            <Footer/>
-        </Box>
+            
+        
 
     )
 }

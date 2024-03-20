@@ -26,8 +26,8 @@ const StyledLink = styled(Link)(({ theme }) => ({
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
-    display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
-    padding:'1.5rem',
+    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+    padding: '1rem 0rem',
     '@media(max-width : 600px)': {
         flexWrap: 'wrap',
         justifyContent: 'center',

@@ -226,7 +226,7 @@ const BecomeSetup: React.FC = () => {
 
     return (
         <Box>
-            <Box sx={{ padding: '1.5rem' }}>
+            <Box  >
                 <Headingcmp text={'Become a validator'} />
             </Box>
             <Container>
